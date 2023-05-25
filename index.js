@@ -16,6 +16,9 @@ app.post('/mail', (req, res) => {
         message
     })
 })
+app.get('/', (req, res) => {
+    res.json('Hello')
+})
 
 app.listen(3001, () => {
     console.log('Server is running');
