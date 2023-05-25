@@ -1,8 +1,10 @@
 const express = require('express')
 const mailer = require('./nodemailer')
+const cors = require('cors')
 
 const app = express()
 app.use(express.json())
+app.use(cors())
 
 app.post('/mail', (req, res) => {
     const message = {
